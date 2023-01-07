@@ -108,11 +108,18 @@ for (let i = 0; i < finances.length - 1; i++) {
   totalChange += change[i]
 } 
 
-// average change
+// average change in profit/loses
 averageChange = (totalChange / change.length).toFixed(2);
+
+// greatest increase in profits
+let greatestIncrease = Math.max(...change);
+// greatest decrease in profits
+let greatestDecrease = Math.min(...change);
+
 
 console.log(`
   Total Months: ${totalMonths}
   Total Amount: ${totalAmount}
   Average Change: ${averageChange}
-  Greatest Increase: `);
+  Greatest Increase: ${greatestIncrease}
+  Greatest Decrease: ${greatestDecrease}`);
