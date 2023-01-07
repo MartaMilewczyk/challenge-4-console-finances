@@ -88,14 +88,31 @@ var finances = [
   ];
   
 
-let totalMonths = 0;
+// variables declaration
+let totalMonths = finances.length;
 let totalAmount = 0;
 
+let totalChange = 0;
+let averageChange = 0;
+
 for (let i = 0; i < finances.length; i++) {
-    totalMonths++;
-    totalAmount += finances[i][1];
-}
+  // net total amount of profit/losses
+  totalAmount += finances[i][1];
+} 
+
+let change = [];
+for (let i = 0; i < finances.length - 1; i++) {
+  // change in profit/loses
+  change.push(finances[i + 1][1] - finances[i][1]);
+  // total change profit/loses
+  totalChange += change[i]
+} 
+
+// average change
+averageChange = (totalChange / change.length).toFixed(2);
 
 console.log(`
   Total Months: ${totalMonths}
-  Total Amount: ${totalAmount}`);
+  Total Amount: ${totalAmount}
+  Average Change: ${averageChange}
+  Greatest Increase: `);
