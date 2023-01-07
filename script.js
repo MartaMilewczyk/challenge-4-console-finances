@@ -117,13 +117,15 @@ let greatestIncrease = Math.max(...change);
 let greatestDecrease = Math.min(...change);
 
 // month with the greatest increase in profits
-let monthIncrease = change.indexOf(greatestIncrease, 1);
+let monthIncrease = change.indexOf(greatestIncrease) + 1;
 // month with the greatest decrease in profits
-let monthDecrease = change.indexOf(greatestDecrease, 1);
+let monthDecrease = change.indexOf(greatestDecrease) + 1;
 
 console.log(`
+  Financial Analysis
+  --------------------------
   Total Months: ${totalMonths}
   Total Amount: $${totalAmount}
   Average Change: $${averageChange}
-  Greatest Increase:  ${monthIncrease} $${greatestIncrease}
-  Greatest Decrease: ${monthIncrease} $${greatestDecrease}`);
+  Greatest Increase:  ${finances[monthIncrease][0]} $${greatestIncrease}
+  Greatest Decrease: ${finances[monthDecrease][0]} $${greatestDecrease}`);
