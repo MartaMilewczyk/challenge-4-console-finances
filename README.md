@@ -18,9 +18,11 @@ JavaScript code analyzes the records to calculate each of the following:
 
 ## Installation
 
-Application is deployed in <a href=" https://martamilewczyk.github.io/challenge-4-console-finances/">Github</a>
+Application is deployed in <a href="https://martamilewczyk.github.io/challenge-4-console-finances">Github</a>
 
 ## Usage
+
+Application view
 
 ![alt text](assets/images/screenshot.png)
 
